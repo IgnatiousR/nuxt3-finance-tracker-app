@@ -1,9 +1,17 @@
 <template>
-  <div class="flex h-screen flex-col">
-    <div class="w-full border-b">Header</div>
-    <div class="max-w-7xl lg:mx-auto p-5 md:px-10 w-full flex-1">
-      <UButton class="cursor-pointer">Button</UButton>
+  <section class="flex items-center justify-between mb-10">
+    <h1 class="text-4xl font-extrabold">Summary</h1>
+    <div>
+      <USelectMenu
+        v-model="selectedView"
+        :items="transactionViewOptions"
+        class="w-32"
+      />
     </div>
-    <div>Footer</div>
-  </div>
+  </section>
 </template>
+
+<script setup>
+import { transactionViewOptions } from "~/constants";
+const selectedView = ref("Yearly");
+</script>
