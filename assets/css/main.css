@@ -18,6 +18,14 @@
     @apply flex justify-between items-center;
   }
 
+  .green {
+    @apply text-green-600 dark:text-green-400;
+  }
+
+  .red {
+    @apply text-red-600 dark:text-red-400;
+  }
+
   .h1-bold {
     @apply font-bold text-3xl lg:text-4xl;
   }
